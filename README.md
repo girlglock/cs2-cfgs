@@ -30,8 +30,9 @@
 
 ### 2. **Desubticked Manual JB**
 
-- **Description:** Uses desubticked binds to provide a buffer for better timing.  
+- **Description:** Uses desubticked binds to provide a buffer for better timing. Start scrolling your mouse wheel before landing and simply unduck.  
 - **Configuration:**
+
 autoexec.cfg
 ```
 bind KEY1 "-ctrl" //replace KEY1 with your desired key like "o"
@@ -73,8 +74,9 @@ duck -999 0 0; clear
 
 ### 3. **Desubticked JB Radio Bind**
 
-- **Description:** Uses radial binds for multibind support.  
+- **Description:** Uses radial binds for multibind support. Once in optimal JB height press and release your KEY bind (bind will execute once you let go of the key). 
 - **Configuration:**
+
 autoexec.cfg
 ```
 bind KEY +radialradio1 //replace KEY with your desired key like mouse5
@@ -101,7 +103,7 @@ cl_radial_radio_tab_1_text_8 cmd";duck -999 0 0; jump 1 0 0; jump -999 0 0;
 
 ### 4. **Subticked JB Wooting DKS Bind**
 
-- **Description:** Set up a Wooting DKS bind to press duck on the way in and press jump on the way up.  
+- **Description:** Set up a Wooting DKS bind to press duck on the way in and press jump on the way up. Use KEY to duck and once in optimal JB height simply release KEY.
 - **Configuration:**
 autoexec.cfg
 ```
@@ -120,7 +122,7 @@ bind KEY "+duck" //replace KEY with your desired key like "alt"
 
 ### 5. **Subticked JB Macro Bind**
 
-- **Description:** Set up macros to press unduck and jump simultaneously.  
+- **Description:** Set up macros to press unduck and jump simultaneously. Once in optimal JB height press your macro key.
 - **Configuration:**
 autoexec.cfg
 ```
@@ -138,7 +140,7 @@ bind KEY2 "+jump" //replace KEY2 with your desired key like "i"
 
 ### 6. **Desubticked JB Macro Bind**
 
-- **Description:** Similar to the subticked method but uses desubticked binds.  
+- **Description:** Similar to the subticked method but uses desubticked binds. Once in optimal JB height press your macro key. 
 - **Configuration:**
 autoexec.cfg
 ```
