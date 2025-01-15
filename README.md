@@ -35,8 +35,8 @@
 
 autoexec.cfg
 ```
-bind KEY1 "-ctrl" //replace KEY1 with your desired key like "o"
-bind KEY2 "+j" //replace KEY2 with your desired key like "i"
+bind ctrl "-ctrl" //replace KEY1 with your desired key like "o"
+bind mwheeldown "+j" //replace KEY2 with your desired key like "i"
 
 alias +j "echo "sub_cfg/desubtick/+j" | exec"
 alias -j "echo "sub_cfg/desubtick/-j" | exec"
