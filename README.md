@@ -1,20 +1,23 @@
-# Different Ways to Jump Bug as of 28/02/2025
+# Different Ways to Jump Bug as of 02/03/2025
 
 ## Comparison
 
 | Method                                      | Works on Any Height | Easier Timing | Does not require Special Binds | Isn't Cheeto |
 |----------------------------------------------|---------------------|---------------|------------------------|-------------------|
 | **Manual JB**                                | ✅                  | ❌            | ✅                     | ✅                |
+| **Desubticked Manual JB**                    | ❌                  | ✅            | ✅                     | ❌                |
 | **Desubticked JB Radio Bind**                | ❌                  | ✅            | ❌                     | ✅                |
-| **Subticked JB Wooting DKS Bind**            | ✅                  | ❌            | ❌                     | ❌                |
-| **Subticked JB Macro Bind**                  | ✅                  | ❌            | ❌                     | ❌                |
-| **Desubticked JB `sv_cheats 1` Async Exploit** | ❌               | ✅            | ❌                     | ❌                |
+| **Subticked JB Wooting DKS Bind**          | ✅                  | ❌            | ❌                     | ❌                |
+| **Desubticked JB Macro Bind**                  | ❌                  | ✅            | ❌                     | ❌                |
+| **Subticked JB Macro Bind**                    | ✅                  | ❌            | ❌                     | ❌                |
+| **Desubticked JB Async Exploit (`sv_cheats 1`)** | ❌                  | ✅            | ❌                     | ❌                |
+
 
 ---
 
 ## Methods:
 
-### 1. **Manual JB**
+# 1. **Manual JB**
 
 - **Description:** Use regular binds like `+duck` and `+jump`. Start scrolling your mouse wheel before landing and simply unduck.  
 - **Pros:**  
@@ -26,8 +29,55 @@
 
 ---
 
+# 2. **Desubticked Manual JB**
 
-### 2. **Desubticked JB Radio Bind**
+- **Description:** Uses radial binds for multibind support. Once in optimal JB height press and release your KEY bind (bind will execute once you let go of the key). 
+- **Configuration:**
+
+autoexec.cfg
+```c
+bind mwheelup +j
+bind mwheeldown +j
+bind ctrl +ctrl
+
+alias +j "exec +j"
+alias -j "exec -j"
+
+alias +ctrl "exec +ctrl"
+alias -ctrl "exec -ctrl"
+```
+
++j.cfg
+```c
+setinfo jump 0
+toggle jump "1 0 0"
+```
+
+-j.cfg
+```c
+setinfo jump 0
+toggle jump "-999 0 0"
+```
+
++ctrl.cfg
+```c
+setinfo duck 0
+toggle duck "1 0 0"
+```
+
+-ctrl.cfg
+```c
+setinfo duck 0
+toggle duck "-999 0 0"
+```
+  
+- **Pros:**  
+  - Easier timing with +/-16ms buffer  
+- **Cons:**  
+  - Restricted to 64-tick heights
+  - Requires precise timing for unduck and jump in the same subtick  
+
+# 3. **Desubticked JB Radio Bind**
 
 - **Description:** Uses radial binds for multibind support. Once in optimal JB height press and release your KEY bind (bind will execute once you let go of the key). 
 - **Configuration:**
@@ -56,7 +106,7 @@ cl_radial_radio_tab_1_text_8 cmd";duck -999 0 0; jump 1 0 0; jump -999 0 0;
 
 ---
 
-### 3. **Subticked JB Wooting DKS Bind**
+# 4. **Subticked JB Wooting DKS Bind**
 
 - **Description:** Set up a Wooting DKS bind to press duck on the way in and press jump on the way up. Use KEY to duck and once in optimal JB height simply release KEY.
 - **Configuration:**
@@ -75,7 +125,55 @@ bind KEY "+duck" //replace KEY with your desired key like "alt"
 
 ---
 
-### 4. **Subticked JB Macro Bind**
+# 5. **Desubticked JB Macro Bind**
+
+- **Description:** Set up macros to press unduck and jump simultaneously. Once in optimal JB height press your macro key.
+- **Configuration:**
+autoexec.cfg
+```
+alias +j "exec +j"
+alias -j "exec -j"
+
+alias +ctrl "exec +ctrl"
+alias -ctrl "exec -ctrl"
+
+bind KEY1 "-ctrl" //replace KEY1 with your desired key like "o"
+bind KEY2 "+j" //replace KEY2 with your desired key like "i"
+```
+
++j.cfg
+```c
+setinfo jump 0
+toggle jump "1 0 0"
+```
+
+-j.cfg
+```c
+setinfo jump 0
+toggle jump "-999 0 0"
+```
+
++ctrl.cfg
+```c
+setinfo duck 0
+toggle duck "1 0 0"
+```
+
+-ctrl.cfg
+```c
+setinfo duck 0
+toggle duck "-999 0 0"
+```
+
+- **Pros:**  
+  - Easier timing with +/-16ms buffer
+- **Cons:**  
+  - Restricted to 64-tick heights
+  - Considered cheeto 
+
+---
+
+# 6. **Subticked JB Macro Bind**
 
 - **Description:** Set up macros to press unduck and jump simultaneously. Once in optimal JB height press your macro key.
 - **Configuration:**
@@ -94,7 +192,7 @@ bind KEY2 "+jump" //replace KEY2 with your desired key like "i"
 ---
 
 
-### 6. **Desubticked JB Async Exploit (`sv_cheats 1`)**
+# 7. **Desubticked JB Async Exploit (`sv_cheats 1`)**
 
 - **Description:** Uses an exploit to bypass `sv_cheats 1` and asynchronously execute a COD4 like sleep cfg (flashbacks :aware:).  
 - **Reference:** [Steam Guide](https://steamcommunity.com/sharedfiles/filedetails/?id=3313210014)  
