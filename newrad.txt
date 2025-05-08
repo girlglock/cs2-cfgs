@@ -1,0 +1,11 @@
+"settings"
+{
+	// girlglock.com
+	
+	ROTATION_OFFSET		45
+	
+	FLASHBANG			1.0
+	MOLOTOV				1.0
+	SMOKEGRENADE		1.0
+	HEGRENADE			1.0
+}
