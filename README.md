@@ -3,7 +3,7 @@
 ## Launch Options
 
 ```
-+exec_async autoexec -novconsole -disable_workshop_command_filtering -testscript "../../csgo/cfg/.vtest" -allow_third_party_software
++exec_async autoexec -novconsole -disable_workshop_command_filtering -allow_third_party_software
 ```
 
 <table>
@@ -22,10 +22,6 @@
 <tr>
 <td nowrap><code>disable_workshop_command_filtering</code></td>
 <td>Allows aliased exec binds to function correctly on workshop maps.. ie <code>-vtest</code> ones</td>
-</tr>
-<tr>
-<td nowrap><code>testscript</code></td>
-<td>A scripting system Valve never really used and forgor to remove... i assume its a predecessor to exec_async. Can loop indefinitely, no <code>sv_cheats</code> flag. Executing a cfg with inputs inside from a -vtest script uses a <code>2.0f</code> timestamp, queueing input for the beginning <code>0.0f</code> of the next tick (desubticked)</td>
 </tr>
 <tr>
 <td nowrap><code>allow_third_party_software</code></td>
